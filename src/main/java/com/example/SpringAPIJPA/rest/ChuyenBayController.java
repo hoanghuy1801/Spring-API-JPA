@@ -21,12 +21,29 @@ public class ChuyenBayController {
 		chuyenBayService=theChuyenBayService;
 		// TODO Auto-generated constructor stub
 	}
-	
-	@GetMapping("/MayBay/{gaDen}")
+	// cau 1
+	@GetMapping("/ChuyenBay/{gaDen}")
 	public List<ChuyenBay> findAllByGaDen(@PathVariable String gaDen) {
 		
 		 return   chuyenBayService.findAllByGaDen(gaDen);
 		
+	}
+	//cau 4
+	@GetMapping("/chuyenBay8kDen10k")
+	public List<ChuyenBay> chuyenBay8kDen10k(){
+		return chuyenBayService.chuyenBay8kDen10k();
+	}
+	//cau 5
+	@GetMapping("/chuyenBaySaiGonMeThuoc")
+	public List<ChuyenBay> chuyenBaySaiGonMeThuoc() {
+		return chuyenBayService.chuyenBaySaiGonMeThuoc("SGN", "BMV");
+	
+	}
+	//cau 6
+	@GetMapping("/chuyenBayTuSaiGon")
+	public int chuyenBayTuSaiGon() {
+		// TODO Auto-generated method stub
+		return chuyenBayService.chuyenBayTuSaiGon();
 	}
 
 }
