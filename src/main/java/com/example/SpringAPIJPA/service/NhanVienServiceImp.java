@@ -35,9 +35,9 @@ public class NhanVienServiceImp implements NhanVienService{
 	}
 
 	@Override
-	public List<NhanVien> phiCongMayBay747(String mb) {
+	public List<NhanVien> phiCongMayBay747() {
 		// TODO Auto-generated method stub
-		return nhanVienRepository.phiCongMayBay747(mb);
+		return nhanVienRepository.phiCongMayBay747();
 	}
 
 	@Override
@@ -51,5 +51,7 @@ public class NhanVienServiceImp implements NhanVienService{
 		// TODO Auto-generated method stub
 		return nhanVienRepository.findNameByMB(loai);
 	}
+
+	
 
 }

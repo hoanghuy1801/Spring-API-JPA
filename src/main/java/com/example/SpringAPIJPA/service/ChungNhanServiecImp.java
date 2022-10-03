@@ -17,9 +17,9 @@ public class ChungNhanServiecImp  implements ChungNhanService{
 	}
 
 	@Override
-	public List<String> maMBVoiNVHoNguyen(String name) {
+	public List<String> maMBVoiNVHoNguyen() {
 		// TODO Auto-generated method stub
-		return chungNhanRepository.maMBVoiNVHoNguyen(name);
+		return chungNhanRepository.maMBVoiNVHoNguyen();
 	}
 
 }

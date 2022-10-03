@@ -19,10 +19,10 @@ public class ChungNhanController {
 		chungNhanService=theChungNhanService;
 		// TODO Auto-generated constructor stub
 	}
-	@GetMapping("/ChungNhan/{name}")
-	public ChungNhan maMBVoiNVHoNguyen(@PathVariable String name) {
+	@GetMapping("/maMBVoiNVHoNguyen")
+	public ChungNhan maMBVoiNVHoNguyen() {
 		
-		 return (ChungNhan) chungNhanService.maMBVoiNVHoNguyen(name);
+		 return (ChungNhan) chungNhanService.maMBVoiNVHoNguyen();
 		
 	}
 	

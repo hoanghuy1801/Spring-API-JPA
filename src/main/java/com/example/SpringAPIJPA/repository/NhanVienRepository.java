@@ -23,8 +23,8 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
 	@Query(value = "select DISTINCT nv.manv from chungnhan c join maybay mb on c.mamb = mb.mamb join nhanvien nv on nv.manv = c.manv where loai like ?1% ", nativeQuery = true)
 	List<String> phiCongLaiBoeing(String ma);
 //  10
-	@Query(value = "select * from nhanvien nv JOIN chungnhan cn on nv.manv = cn.manv Join maybay mb on mb.mamb = cn.mamb where mb.mamb=?1", nativeQuery = true)
-	List<NhanVien> phiCongMayBay747(String mb);
+	@Query(value = "select * from nhanvien nv JOIN chungnhan cn on nv.manv = cn.manv Join maybay mb on mb.mamb = cn.mamb where mb.mamb=747", nativeQuery = true)
+	List<NhanVien> phiCongMayBay747();
 //	12
 	@Query(nativeQuery = true, 
 			value = "SELECT nhanvien.manv FROM nhanvien WHERE nhanvien.manv IN (SELECT DISTINCT manv FROM chungnhan WHERE mamb IN (SELECT mamb FROM maybay WHERE loai LIKE ?1)) AND nhanvien.manv IN ( SELECT DISTINCT manv FROM chungnhan WHERE mamb IN (SELECT mamb FROM maybay WHERE loai LIKE ?2) )")

@@ -18,7 +18,7 @@ public interface NhanVienService {
 	List<String> phiCongLaiBoeing(String ma);
 //  10
 	
-	List<NhanVien> phiCongMayBay747(String mb);
+	List<NhanVien> phiCongMayBay747();
 //	12
 	
 	List<String> phiCongLai2MB(String mb1, String mb2);

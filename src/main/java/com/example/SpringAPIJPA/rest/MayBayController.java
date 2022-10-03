@@ -2,6 +2,7 @@ package com.example.SpringAPIJPA.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import com.example.SpringAPIJPA.service.MayBayService;
 @RequestMapping("/api")
 public class MayBayController {
 	private MayBayService mayBayService;
-	 
+	 @Autowired
 	public MayBayController(MayBayService theMayBayService) {
 		mayBayService=theMayBayService;
 		// TODO Auto-generated constructor stub
